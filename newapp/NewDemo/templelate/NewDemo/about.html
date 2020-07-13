@@ -1,0 +1,47 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<h1>welcome to Movie Hub</h1>
+<style>
+img {
+  border-radius: 50%;
+}
+</style>
+<style>
+h1 {
+  text-shadow: 2px 2px 5px red;
+}
+</style>
+<style>
+h1 {
+  background-color: green;
+}
+
+
+body {
+  background-color: lightblue;
+}
+</style>
+{% if movies.pk is 1%}
+<img src= "https://tse3.mm.bing.net/th?id=OIP.KFgBt2xKR8VoaySdwdAw3wHaHa&pid=Api&P=0&w=300&h=300" height="500px" width="500px">
+<h1><a >{{movies.movie_name}} </a></h1>
+<h2>{{movies.release_date}}</h2>
+<h4>Budget {{md.movie_budget}}</h4>
+<h4> Revenue {{md.movie_revenue}}</h4>
+<h4> Review {{md.movie_review}}</h4>
+
+{% elif movies.pk is 2 %}
+<img src= "https://tse1.mm.bing.net/th?id=OIP.c7c89KXUEh3O6aRgRRlTRwHaFo&pid=Api&P=0&w=207&h=158" height="500px" width="500px">
+<h1><a >{{movies.movie_name}} </a></h1>
+<h2>{{movies.release_date}}</h2>
+<h4>Budget{{details.movie_budget}}</h4>
+<h4> Revenue{{details.movie_revenue}}</h4>
+<h4> Review{{details.movie_review}}</h4>
+
+{% else %}
+<img src= "https://tse1.mm.bing.net/th?id=OIP.c7c89KXUEh3O6aRgRRlTRwHaFo&pid=Api&P=0&w=207&h=158" height="500px" width="500px">
+<h1><a >{{movies.movie_name}} </a></h1>
+<h2> {{movies.release_date}}</h2>
+<h4> Budget{{md.movie_budget}}</h4>
+<h4> Revenue{{md.movie_revenue}}</h4>
+<h4>Review {{md.movie_review}}</h4>
+
+{% endif %}
